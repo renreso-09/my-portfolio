@@ -1,67 +1,76 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        my-portfolio
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+  <div>
+    <div class="header">
+      <img src="../assets/images/background-image.jpg">
+      <p class="main-title">Ren Hirakawa's Portfolio</p>
+    </div>
+    <Menu />
+    <div class="contents">
+      <div class="contents-profile" id="profile">
+        <p class="contents-title">PROFILE</p>
+      </div>
+      <div class="contents-skill" id="skill">
+        <p class="contents-title">SKILL</p>
+      </div>
+      <div class="contents-work" id="work">
+        <p class="contents-title">WORK</p>
+      </div>
+      <div class="contents-contact" id="contact">
+        <p class="contents-title">CONTACT</p>
       </div>
     </div>
+    <div class="footer">footer</div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import Menu from '../components/Menu.vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  components: {
+    Menu
+  }
+})
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.header {
+  position: relative;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.header p {
+  position: absolute;
+  color: white;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-family: 'Press Start 2P';
+  font-weight: bold;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.header img {
+  width: 100%;
 }
 
-.links {
-  padding-top: 15px;
+.main-title {
+   font-size: 2em;
+}
+
+.footer {
+  background-color: #191970;
+}
+
+.contents {
+  margin-left: 128px;
+  margin-right: 128px;
+}
+
+.contents-title {
+  font-family: 'Press Start 2P';
 }
 </style>
