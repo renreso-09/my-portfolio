@@ -34,7 +34,9 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [
+    '~plugins/vue-scrollto'
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -50,6 +52,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    'nuxt-webfontloader'
   ],
   /*
    ** Axios module configuration
@@ -61,4 +64,10 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+
+  webfontloader: {
+    google: {
+      families: ['Press+Start+2P']
+    }
+  }
 }
