@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div class="header">
-      <img src="../assets/images/background-image.jpg">
-      <p class="main-title">Ren Hirakawa's Portfolio</p>
+    <MobileMenu v-if="screenWidth < 660"/>
+    <div class="title">
+      <p class="title-text">Ren Hirakawa's Portfolio</p>
     </div>
-    <Menu />
+    <Menu v-if="screenWidth >= 660"/>
     <div class="contents">
       <div class="contents-profile" id="profile">
         <p class="contents-title">PROFILE</p>
@@ -26,39 +26,64 @@
 <script lang="ts">
 import Vue from 'vue'
 import Menu from '../components/Menu.vue'
+import MobileMenu from '../components/MobileMenu.vue'
 
 export default Vue.extend({
   components: {
-    Menu
-  }
+    Menu,
+    MobileMenu
+  },
+  data(){
+    return {
+      screenWidth: window.innerWidth,
+      screenHeight: window.innerHeight,
+    }
+  },
+   methods: {
+    getWindowSize: function() {
+      this.screenWidth = window.innerWidth;
+      this.screenHeight = window.innerHeight;
+    }
+  },
+
+  mounted() {
+    window.addEventListener('resize', this.getWindowSize);
+  },
 })
 </script>
 
 <style>
-.header {
-  position: relative;
+.title {
+  display: flex;
+  justify-content: center;
 }
 
-.header p {
-  position: absolute;
-  color: white;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
-  margin:0;
-  padding:0;
+.title-text {
+  width: 24em;
   font-family: 'Press Start 2P';
+  font-size: 1vmax;
+  text-align: center;
   font-weight: bold;
+  border-right: 2px solid rgba(255,255,255,.75);
 }
 
-.header img {
-  width: 100%;
-}
+/*1000px以上でアニメーション適用*/ 
+@media (min-width: 1000px){
+    .title-text {
+      overflow: hidden;
+      white-space: nowrap;
+      animation:
+        typewriter 2s steps(30) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal; 
+    }
+  }
 
-.main-title {
-   font-size: 2em;
+@keyframes typewriter{
+  from{width: 0;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0, 0, 2, 0.75);}
+  to{border-right-color: transparent;}
 }
 
 .footer {
@@ -72,5 +97,6 @@ export default Vue.extend({
 
 .contents-title {
   font-family: 'Press Start 2P';
+  text-align: center;
 }
 </style>
