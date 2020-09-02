@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="portfolio">
     <MobileMenu v-if="screenWidth < 660"/>
     <div class="title">
       <p class="title-text">Ren Hirakawa's Portfolio</p>
@@ -19,7 +19,11 @@
         <p class="contents-title">CONTACT</p>
       </div>
     </div>
-    <div class="footer">footer</div>
+    <div class="footer">
+      <footer>
+        <p>©2020 renreso</p>
+      </footer>
+    </div>
   </div>
 </template>
 
@@ -53,6 +57,12 @@ export default Vue.extend({
 </script>
 
 <style>
+.portfolio {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+}
 .title {
   display: flex;
   justify-content: center;
@@ -88,6 +98,11 @@ export default Vue.extend({
 
 .footer {
   background-color: #191970;
+  color: #ffffff;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .contents {
