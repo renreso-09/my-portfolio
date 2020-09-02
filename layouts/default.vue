@@ -10,6 +10,6 @@ body {
 }
 
 html {
-  
+  font-size: 62.5%;
 }
 </style>
