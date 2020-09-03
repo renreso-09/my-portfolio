@@ -8,6 +8,7 @@
     <div class="contents">
       <div class="contents-profile" id="profile">
         <p class="contents-title">PROFILE</p>
+        <Profile />
       </div>
       <div class="contents-skill" id="skill">
         <p class="contents-title">SKILL</p>
@@ -31,11 +32,13 @@
 import Vue from 'vue'
 import Menu from '../components/Menu.vue'
 import MobileMenu from '../components/MobileMenu.vue'
+import Profile from '../components/Profile.vue'
 
 export default Vue.extend({
   components: {
     Menu,
-    MobileMenu
+    MobileMenu,
+    Profile
   },
   data(){
     return {
@@ -113,5 +116,6 @@ export default Vue.extend({
 .contents-title {
   font-family: 'Press Start 2P';
   text-align: center;
+  font-size: 1vmax;
 }
 </style>
