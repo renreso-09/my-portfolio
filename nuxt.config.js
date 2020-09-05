@@ -14,7 +14,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: "Ren Hirakawa's Portfolio",//process.env.npm_package_name || '',
+    title: "Renreso's Portfolio",//process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -67,7 +67,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ['Press+Start+2P']
+      families: ['Press+Start+2P', 'Noto+Sans+JP']
     }
   }
 }

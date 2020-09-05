@@ -1,11 +1,41 @@
 <template>
 	<div class="profile">
-		<p>{{profile.data}}</p>
+    <div class="profile-image">
+      <img src="../assets/images/profile_icon.png" alt="profile_icon"/>
+    </div>
+		<div class="profile-text">
+			<p>{{profile.introduction}}</p>
+			<p>{{profile.comment}}</p>
+			<p>{{profile.language}}</p>
+			<p>{{profile.hobby}}</p>
+			<p>{{profile.target}}</p>
+		</div>
 	</div>
 </template>
 <style>
-.profile {
-	text-align: center;
+
+.profile-text {
+	font-family: "Noto Sans JP";
+}
+@media only screen and (max-width: 660px){
+  .profile-image img {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 1000px){
+  .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-image img {
+    width: 256px;
+    height: 256px;
+  }
 }
 </style>
 <script>

@@ -2,7 +2,7 @@
   <div class="portfolio">
     <MobileMenu v-if="screenWidth < 660"/>
     <div class="title">
-      <p class="title-text">Ren Hirakawa's Portfolio</p>
+      <p class="title-text">Renreso's Portfolio</p>
     </div>
     <Menu v-if="screenWidth >= 660"/>
     <div class="contents">
@@ -72,7 +72,7 @@ export default Vue.extend({
 }
 
 .title-text {
-  width: 24em;
+  width: 19em;
   font-family: 'Press Start 2P';
   font-size: 1vmax;
   text-align: center;
@@ -89,7 +89,19 @@ export default Vue.extend({
         typewriter 2s steps(30) 1s 1 normal both,
         blinkTextCursor 500ms steps(44) infinite normal; 
     }
+    .contents {
+      margin-left: 128px;
+      margin-right: 128px;
+    }
+}
+
+/*660px(モバイル対応)未満のCSS*/
+@media (max-width: 660px) {
+  .contents {
+    margin-left: 15%;
+    margin-right: 15%;
   }
+}
 
 @keyframes typewriter{
   from{width: 0;}
@@ -108,10 +120,7 @@ export default Vue.extend({
   width: 100%;
 }
 
-.contents {
-  margin-left: 128px;
-  margin-right: 128px;
-}
+
 
 .contents-title {
   font-family: 'Press Start 2P';
