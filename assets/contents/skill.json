@@ -1,0 +1,26 @@
+[
+  {
+    "skill": {
+      "title": "Ruby",
+      "level": 2,
+      "years": 2,
+      "description": "研究で使用してました"
+    }
+  },
+  {
+    "skill": {
+      "title": "Typescript",
+      "level": 1,
+      "years": 0.5,
+      "description": "ストレッチサービスのバックエンドで利用していました"
+    }
+  },
+  {
+    "skill": {
+      "title": "Typescript",
+      "level": 1,
+      "years": 0.5,
+      "description": "ストレッチサービスのバックエンドで利用していました"
+    }
+  }
+]
