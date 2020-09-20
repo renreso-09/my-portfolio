@@ -1,7 +1,7 @@
 <template>
 	<div class="profile">
     <div class="profile-image">
-      <img src="../assets/images/profile_icon.png" alt="profile_icon"/>
+      <img src="../static/images/profile_icon.png" alt="profile_icon"/>
     </div>
 		<div class="profile-text">
 			<p>{{profile.introduction}}</p>

@@ -12,6 +12,9 @@
       </div>
       <div class="contents-skill" id="skill">
         <p class="contents-title">SKILL</p>
+        <div class="skill">
+          <SkillCard v-for="(data, index) in skillDatas" :key="index" :skillData="data.skill" class="skill-card"/>
+        </div>
       </div>
       <div class="contents-work" id="work">
         <p class="contents-title">WORK</p>
@@ -28,22 +31,27 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue'
 import Menu from '../components/Menu.vue'
 import MobileMenu from '../components/MobileMenu.vue'
 import Profile from '../components/Profile.vue'
+import SkillCard from '../components/SkillCard.vue'
+import skillData from '../assets/contents/skill.json'
 
 export default Vue.extend({
   components: {
     Menu,
     MobileMenu,
-    Profile
+    Profile,
+    SkillCard
   },
   data(){
+    console.log(skillData)
     return {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
+      skillDatas: skillData
     }
   },
    methods: {
@@ -93,6 +101,16 @@ export default Vue.extend({
       margin-left: 128px;
       margin-right: 128px;
     }
+    .skill {
+      display: flex;
+      justify-content: center;
+      flex-wrap:wrap;
+      margin-left: 256px;
+      margin-right: 256px;
+    }
+    .skill-card {
+      width: 40%;
+    }
 }
 
 /*660px(モバイル対応)未満のCSS*/
@@ -119,8 +137,6 @@ export default Vue.extend({
   bottom: 0;
   width: 100%;
 }
-
-
 
 .contents-title {
   font-family: 'Press Start 2P';
