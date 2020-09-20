@@ -103,9 +103,13 @@ export default Vue.extend({
     }
     .skill {
       display: flex;
-      align-items: center;
       justify-content: center;
       flex-wrap:wrap;
+      margin-left: 256px;
+      margin-right: 256px;
+    }
+    .skill-card {
+      width: 40%;
     }
 }
 
