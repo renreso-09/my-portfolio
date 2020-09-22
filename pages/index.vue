@@ -1,8 +1,10 @@
 <template>
   <div class="portfolio">
     <MobileMenu v-if="screenWidth < 660"/>
-    <div class="title">
-      <p class="title-text">Renreso's Portfolio</p>
+    <div class="title-head">
+      <div class="title">
+        <p class="title-text">Renreso's Portfolio</p>
+      </div>
     </div>
     <Menu v-if="screenWidth >= 660"/>
     <div class="contents">
@@ -18,6 +20,7 @@
       </div>
       <div class="contents-work" id="work">
         <p class="contents-title">WORK</p>
+        <p class="comming-soon">COMMING SOON...</p>
       </div>
       <div class="contents-contact" id="contact">
         <p class="contents-title">CONTACT</p>
@@ -38,16 +41,17 @@ import MobileMenu from '../components/MobileMenu.vue'
 import Profile from '../components/Profile.vue'
 import SkillCard from '../components/SkillCard.vue'
 import skillData from '../assets/contents/skill.json'
+import WorkCard from '../components/WorkCard.vue'
 
 export default Vue.extend({
   components: {
     Menu,
     MobileMenu,
     Profile,
-    SkillCard
+    SkillCard,
+    WorkCard
   },
   data(){
-    console.log(skillData)
     return {
       screenWidth: window.innerWidth,
       screenHeight: window.innerHeight,
@@ -74,6 +78,14 @@ export default Vue.extend({
   padding-bottom: 35px;
   box-sizing: border-box;
 }
+
+.title-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
 .title {
   display: flex;
   justify-content: center;
@@ -82,10 +94,17 @@ export default Vue.extend({
 .title-text {
   width: 19em;
   font-family: 'Press Start 2P';
-  font-size: 1vmax;
+  font-size: 2.4rem;
   text-align: center;
   font-weight: bold;
   border-right: 2px solid rgba(255,255,255,.75);
+}
+
+.comming-soon {
+  font-family: 'Press Start 2P';
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: bold;
 }
 
 /*1000px以上でアニメーション適用*/ 
@@ -141,6 +160,6 @@ export default Vue.extend({
 .contents-title {
   font-family: 'Press Start 2P';
   text-align: center;
-  font-size: 1vmax;
+  font-size: 2.4rem;
 }
 </style>

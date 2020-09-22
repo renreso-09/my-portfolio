@@ -16,6 +16,7 @@
 
 .profile-text {
 	font-family: "Noto Sans JP";
+  font-size: 1.2rem;
 }
 @media only screen and (max-width: 660px){
   .profile-image img {
