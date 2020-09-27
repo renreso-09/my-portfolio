@@ -24,6 +24,9 @@
       </div>
       <div class="contents-contact" id="contact">
         <p class="contents-title">CONTACT</p>
+        <a href="https://twitter.com/blacklo46145764" target="_blank" class="contact_twitter">
+          <img src="/images/twitter_icon.svg" alt="twitter_icon">
+        </a>
       </div>
     </div>
     <div class="footer">
@@ -105,6 +108,18 @@ export default Vue.extend({
   font-size: 1.6rem;
   text-align: center;
   font-weight: bold;
+}
+
+.contact_twitter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.contact_twitter img {
+  width: 6.4rem;
+  height: 6.4rem;
 }
 
 /*1000px以上でアニメーション適用*/ 
