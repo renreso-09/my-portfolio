@@ -1,0 +1,92 @@
+[
+  {
+    "skill": {
+      "title": "Ruby",
+      "level": 2,
+      "years": 2,
+      "description": "主に研究で使用。トラフィック分析とかしてました。",
+      "image": "/images/ruby.png"
+    }
+  },
+  {
+    "skill": {
+      "title": "Typescript",
+      "level": 1,
+      "years": 0.5,
+      "description": "主にReactとNestJSで利用してました。ここで初めて静的な型付けに出会う。",
+      "image": "/images/typescript.png"
+    }
+  },
+  {
+    "skill": {
+      "title": "ASP.NET Core(C#)",
+      "level": 1,
+      "years": 0.5,
+      "description": "業務で使用。API作成してました。",
+      "image": "/images/aspdotnetcore.png"
+    }
+  },
+  {
+    "skill": {
+      "title": "NestJS",
+      "level": 1,
+      "years": 0.5,
+      "description": "業務で使用。社内サービスのバックエンドで利用してました。",
+      "image": "/images/nestjs.png"
+    }
+  },
+  {
+    "skill": {
+      "title": "NuxtJS",
+      "level": 1,
+      "years": 0.3,
+      "description": "このポートフォリオで使用。Reactよりは学習コストが低い印象。",
+      "image": "/images/nuxtjs.png"
+    }
+  },
+  {
+    "skill": {
+      "title": "ReactJS",
+      "level": 1,
+      "years": 0.5,
+      "description": "業務で使用。Reduxで苦戦した思い出がある。",
+      "image": "/images/reactjs.png"
+    }
+  },
+  {
+    "skill": {
+      "title": "MySQL",
+      "level": 1,
+      "years": 0.5,
+      "description": "業務で使用。社内サービスのユーザー管理等がメイン。",
+      "image": "/images/storage.png"
+    }
+  },
+  {
+    "skill": {
+      "title": "GitHub",
+      "level": 2,
+      "years": 1.5,
+      "description": "業務で使用。タスク管理やGithub actions等も活用。",
+      "image": "/images/github.png"
+    }
+  },
+  {
+    "skill": {
+      "title": "GitLab",
+      "level": 2,
+      "years": 1.5,
+      "description": "研究のソースコード管理に利用。",
+      "image": "/images/gitlab.png"
+    }
+  },
+  {
+    "skill": {
+      "title": "Go",
+      "level": 1,
+      "years": 0.1,
+      "description": "最近学び始めた言語。書いていて面白い。",
+      "image": "/images/golang.png"
+    }
+  }
+]
