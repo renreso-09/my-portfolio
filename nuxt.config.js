@@ -1,13 +1,4 @@
 /* nuxt.config.js */
-// `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
-const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        router: {
-          base: '/my-portfolio/'
-        }
-      }
-    : {}
 
 export default {
   /*
@@ -35,7 +26,7 @@ export default {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: 'my-portfolio/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   /*
    ** Global CSS
@@ -80,9 +71,5 @@ export default {
     google: {
       families: ['Press+Start+2P', 'Noto+Sans+JP']
     }
-  },
-
-  router: {
-    base: '/<repository-name>/'
   }
 }
